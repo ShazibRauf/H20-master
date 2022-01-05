@@ -1,0 +1,1724 @@
+wwwwwww /home5/satti/HOPE-master9-Zeros-cam4/datasets/ho/
+Train files loaded
+Validation files loaded
+Model Training on GPU 0
+Adding hand generator .. 
+Loading Fixed Adjacency Matrix ..
+Loading Fixed Adjacency Matrix ..
+HopeNet is loaded
+HopeNet(
+  (resnet): ResNet(
+    (conv1): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+    (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU(inplace=True)
+    (maxpool): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+    (layer1): Sequential(
+      (0): Bottleneck(
+        (conv1): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (downsample): Sequential(
+          (0): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): Bottleneck(
+        (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (2): Bottleneck(
+        (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (layer2): Sequential(
+      (0): Bottleneck(
+        (conv1): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (downsample): Sequential(
+          (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): Bottleneck(
+        (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (2): Bottleneck(
+        (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (3): Bottleneck(
+        (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (layer3): Sequential(
+      (0): Bottleneck(
+        (conv1): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (downsample): Sequential(
+          (0): Conv2d(512, 1024, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): Bottleneck(
+        (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (2): Bottleneck(
+        (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (3): Bottleneck(
+        (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (4): Bottleneck(
+        (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (5): Bottleneck(
+        (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (layer4): Sequential(
+      (0): Bottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (downsample): Sequential(
+          (0): Conv2d(1024, 2048, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): Bottleneck(
+        (conv1): Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (2): Bottleneck(
+        (conv1): Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+    (fc): Linear(in_features=2048, out_features=100, bias=True)
+  )
+  (graphnet): GraphNet(
+    (gconv1): GraphConv(
+      (fc): Linear(in_features=2050, out_features=128, bias=True)
+      (activation): ReLU(inplace=True)
+    )
+    (gconv2): GraphConv(
+      (fc): Linear(in_features=128, out_features=16, bias=True)
+      (activation): ReLU(inplace=True)
+    )
+    (gconv3): GraphConv(
+      (fc): Linear(in_features=16, out_features=2, bias=True)
+    )
+  )
+  (graphunet): GraphUNet(
+    (gconv1): GraphConv(
+      (fc): Linear(in_features=2, out_features=4, bias=True)
+      (activation): ReLU(inplace=True)
+    )
+    (pool1): GraphPool(
+      (fc): Linear(in_features=50, out_features=25, bias=True)
+    )
+    (gconv2): GraphConv(
+      (fc): Linear(in_features=4, out_features=8, bias=True)
+      (activation): ReLU(inplace=True)
+    )
+    (pool2): GraphPool(
+      (fc): Linear(in_features=25, out_features=12, bias=True)
+    )
+    (gconv3): GraphConv(
+      (fc): Linear(in_features=8, out_features=16, bias=True)
+      (activation): ReLU(inplace=True)
+    )
+    (pool3): GraphPool(
+      (fc): Linear(in_features=12, out_features=6, bias=True)
+    )
+    (gconv4): GraphConv(
+      (fc): Linear(in_features=16, out_features=32, bias=True)
+      (activation): ReLU(inplace=True)
+    )
+    (pool4): GraphPool(
+      (fc): Linear(in_features=6, out_features=3, bias=True)
+    )
+    (gconv5): GraphConv(
+      (fc): Linear(in_features=32, out_features=64, bias=True)
+      (activation): ReLU(inplace=True)
+    )
+    (pool5): GraphPool(
+      (fc): Linear(in_features=3, out_features=1, bias=True)
+    )
+    (fc1): Linear(in_features=64, out_features=20, bias=True)
+    (fc2): Linear(in_features=20, out_features=64, bias=True)
+    (unpool6): GraphUnpool(
+      (fc): Linear(in_features=1, out_features=3, bias=True)
+    )
+    (gconv6): GraphConv(
+      (fc): Linear(in_features=128, out_features=32, bias=True)
+      (activation): ReLU(inplace=True)
+    )
+    (unpool7): GraphUnpool(
+      (fc): Linear(in_features=3, out_features=6, bias=True)
+    )
+    (gconv7): GraphConv(
+      (fc): Linear(in_features=64, out_features=16, bias=True)
+      (activation): ReLU(inplace=True)
+    )
+    (unpool8): GraphUnpool(
+      (fc): Linear(in_features=6, out_features=12, bias=True)
+    )
+    (gconv8): GraphConv(
+      (fc): Linear(in_features=32, out_features=8, bias=True)
+      (activation): ReLU(inplace=True)
+    )
+    (unpool9): GraphUnpool(
+      (fc): Linear(in_features=12, out_features=25, bias=True)
+    )
+    (gconv9): GraphConv(
+      (fc): Linear(in_features=16, out_features=4, bias=True)
+      (activation): ReLU(inplace=True)
+    )
+    (unpool10): GraphUnpool(
+      (fc): Linear(in_features=25, out_features=50, bias=True)
+    )
+    (gconv10): GraphConv(
+      (fc): Linear(in_features=8, out_features=3, bias=True)
+    )
+    (ReLU): ReLU()
+  )
+  (handMeshgen_left): MeshGen(
+    (unpool1): GraphUnpool(
+      (fc): Linear(in_features=50, out_features=48, bias=True)
+    )
+    (gconv11): GraphConv(
+      (fc): Linear(in_features=2053, out_features=512, bias=True)
+      (activation): ReLU(inplace=True)
+    )
+    (gconv12): GraphConv(
+      (fc): Linear(in_features=512, out_features=256, bias=True)
+      (activation): ReLU(inplace=True)
+    )
+    (unpool2): GraphUnpool(
+      (fc): Linear(in_features=48, out_features=194, bias=True)
+    )
+    (gconv21): GraphConv(
+      (fc): Linear(in_features=256, out_features=128, bias=True)
+      (activation): ReLU(inplace=True)
+    )
+    (gconv22): GraphConv(
+      (fc): Linear(in_features=128, out_features=64, bias=True)
+      (activation): ReLU(inplace=True)
+    )
+    (unpool3): GraphUnpool(
+      (fc): Linear(in_features=194, out_features=778, bias=True)
+    )
+    (gconv31): GraphConv(
+      (fc): Linear(in_features=64, out_features=16, bias=True)
+      (activation): ReLU(inplace=True)
+    )
+    (gconv32): GraphConv(
+      (fc): Linear(in_features=16, out_features=3, bias=True)
+    )
+  )
+  (handMeshgen_right): MeshGen(
+    (unpool1): GraphUnpool(
+      (fc): Linear(in_features=50, out_features=48, bias=True)
+    )
+    (gconv11): GraphConv(
+      (fc): Linear(in_features=2053, out_features=512, bias=True)
+      (activation): ReLU(inplace=True)
+    )
+    (gconv12): GraphConv(
+      (fc): Linear(in_features=512, out_features=256, bias=True)
+      (activation): ReLU(inplace=True)
+    )
+    (unpool2): GraphUnpool(
+      (fc): Linear(in_features=48, out_features=194, bias=True)
+    )
+    (gconv21): GraphConv(
+      (fc): Linear(in_features=256, out_features=128, bias=True)
+      (activation): ReLU(inplace=True)
+    )
+    (gconv22): GraphConv(
+      (fc): Linear(in_features=128, out_features=64, bias=True)
+      (activation): ReLU(inplace=True)
+    )
+    (unpool3): GraphUnpool(
+      (fc): Linear(in_features=194, out_features=778, bias=True)
+    )
+    (gconv31): GraphConv(
+      (fc): Linear(in_features=64, out_features=16, bias=True)
+      (activation): ReLU(inplace=True)
+    )
+    (gconv32): GraphConv(
+      (fc): Linear(in_features=16, out_features=3, bias=True)
+    )
+  )
+)
+second condition is true
+Begin training the network...
+0
+[1,   100] loss: 2259.45239
+[1,   200] loss: 263.04660
+[1,   300] loss: 215.89459
+[1,   400] loss: 213.22498
+[1,   500] loss: 211.02135
+[1,   600] loss: 205.13193
+[1,   700] loss: 201.14317
+[1,   800] loss: 210.88493
+[1,   900] loss: 200.26740
+[1,  1000] loss: 212.11160
+[1,  1100] loss: 210.19705
+[1,  1200] loss: 196.04366
+[1,  1300] loss: 200.87088
+[1,  1400] loss: 186.79614
+[1,  1500] loss: 182.07872
+[1,  1600] loss: 183.58293
+[1,  1700] loss: 172.02176
+[1,  1800] loss: 161.36371
+[1,  1900] loss: 159.78064
+[1,  2000] loss: 164.04660
+[1,  2100] loss: 165.28552
+val error: 284.08139
+1
+[2,   100] loss: 154.01144
+[2,   200] loss: 144.81821
+[2,   300] loss: 136.82269
+[2,   400] loss: 135.61687
+[2,   500] loss: 127.16223
+[2,   600] loss: 114.25378
+[2,   700] loss: 114.34565
+[2,   800] loss: 106.24477
+[2,   900] loss: 96.90997
+[2,  1000] loss: 105.68324
+[2,  1100] loss: 97.74834
+[2,  1200] loss: 87.19640
+[2,  1300] loss: 85.70029
+[2,  1400] loss: 79.17063
+[2,  1500] loss: 72.47979
+[2,  1600] loss: 77.52135
+[2,  1700] loss: 70.14948
+[2,  1800] loss: 73.04279
+[2,  1900] loss: 72.62852
+[2,  2000] loss: 65.87797
+[2,  2100] loss: 62.49714
+val error: 290.42145
+2
+[3,   100] loss: 67.43671
+[3,   200] loss: 59.56572
+[3,   300] loss: 69.89917
+[3,   400] loss: 67.99603
+[3,   500] loss: 67.28139
+[3,   600] loss: 62.08226
+[3,   700] loss: 60.61402
+[3,   800] loss: 50.78769
+[3,   900] loss: 57.50456
+[3,  1000] loss: 59.07183
+[3,  1100] loss: 56.27129
+[3,  1200] loss: 47.88977
+[3,  1300] loss: 61.12607
+[3,  1400] loss: 53.95668
+[3,  1500] loss: 48.96841
+[3,  1600] loss: 51.00435
+[3,  1700] loss: 50.87162
+[3,  1800] loss: 50.32581
+[3,  1900] loss: 55.42869
+[3,  2000] loss: 45.02311
+[3,  2100] loss: 52.69538
+val error: 259.07727
+3
+[4,   100] loss: 45.69571
+[4,   200] loss: 43.12961
+[4,   300] loss: 41.10090
+[4,   400] loss: 37.98684
+[4,   500] loss: 39.34421
+[4,   600] loss: 41.28422
+[4,   700] loss: 42.22277
+[4,   800] loss: 39.02760
+[4,   900] loss: 39.60126
+[4,  1000] loss: 36.26483
+[4,  1100] loss: 41.29341
+[4,  1200] loss: 40.31878
+[4,  1300] loss: 33.92478
+[4,  1400] loss: 34.59435
+[4,  1500] loss: 29.35756
+[4,  1600] loss: 30.72982
+[4,  1700] loss: 34.83527
+[4,  1800] loss: 30.87980
+[4,  1900] loss: 35.68473
+[4,  2000] loss: 30.43460
+[4,  2100] loss: 38.05347
+val error: 221.97575
+4
+[5,   100] loss: 34.65621
+[5,   200] loss: 38.91043
+[5,   300] loss: 36.78928
+[5,   400] loss: 33.27243
+[5,   500] loss: 33.83699
+[5,   600] loss: 33.50464
+[5,   700] loss: 28.16326
+[5,   800] loss: 28.25552
+[5,   900] loss: 29.41405
+[5,  1000] loss: 29.42599
+[5,  1100] loss: 27.36718
+[5,  1200] loss: 23.75666
+[5,  1300] loss: 30.89804
+[5,  1400] loss: 28.54638
+[5,  1500] loss: 27.46757
+[5,  1600] loss: 32.92078
+[5,  1700] loss: 28.14272
+[5,  1800] loss: 24.18110
+[5,  1900] loss: 23.52257
+[5,  2000] loss: 26.47447
+[5,  2100] loss: 21.84039
+val error: 219.75662
+5
+[6,   100] loss: 24.10671
+[6,   200] loss: 21.03570
+[6,   300] loss: 22.06691
+[6,   400] loss: 21.41342
+[6,   500] loss: 29.67351
+[6,   600] loss: 21.60327
+[6,   700] loss: 25.11187
+[6,   800] loss: 22.50549
+[6,   900] loss: 22.01900
+[6,  1000] loss: 29.50987
+[6,  1100] loss: 21.95408
+[6,  1200] loss: 20.01096
+[6,  1300] loss: 17.58755
+[6,  1400] loss: 15.51779
+[6,  1500] loss: 20.34484
+[6,  1600] loss: 16.75843
+[6,  1700] loss: 15.75368
+[6,  1800] loss: 22.97415
+[6,  1900] loss: 29.58099
+[6,  2000] loss: 18.09146
+[6,  2100] loss: 15.45704
+val error: 196.47566
+6
+[7,   100] loss: 20.69205
+[7,   200] loss: 17.88789
+[7,   300] loss: 15.99255
+[7,   400] loss: 17.94560
+[7,   500] loss: 17.50184
+[7,   600] loss: 17.29313
+[7,   700] loss: 20.18821
+[7,   800] loss: 14.80522
+[7,   900] loss: 18.72481
+[7,  1000] loss: 14.35341
+[7,  1100] loss: 19.71871
+[7,  1200] loss: 14.97517
+[7,  1300] loss: 13.41069
+[7,  1400] loss: 16.92513
+[7,  1500] loss: 14.35908
+[7,  1600] loss: 16.52708
+[7,  1700] loss: 22.56702
+[7,  1800] loss: 21.32891
+[7,  1900] loss: 15.66160
+[7,  2000] loss: 14.09081
+[7,  2100] loss: 19.56879
+val error: 208.41515
+7
+[8,   100] loss: 17.54646
+[8,   200] loss: 13.08822
+[8,   300] loss: 15.84198
+[8,   400] loss: 14.52116
+[8,   500] loss: 12.14716
+[8,   600] loss: 16.71088
+[8,   700] loss: 12.35417
+[8,   800] loss: 14.31058
+[8,   900] loss: 33.75857
+[8,  1000] loss: 18.37263
+[8,  1100] loss: 14.48491
+[8,  1200] loss: 14.03763
+[8,  1300] loss: 14.22862
+[8,  1400] loss: 14.80565
+[8,  1500] loss: 13.84576
+[8,  1600] loss: 11.32662
+[8,  1700] loss: 13.84264
+[8,  1800] loss: 19.23445
+[8,  1900] loss: 11.72101
+[8,  2000] loss: 14.76522
+[8,  2100] loss: 15.14469
+val error: 187.56299
+8
+[9,   100] loss: 11.33727
+[9,   200] loss: 16.52563
+[9,   300] loss: 10.04464
+[9,   400] loss: 9.39631
+[9,   500] loss: 14.77438
+[9,   600] loss: 10.99240
+[9,   700] loss: 10.67732
+[9,   800] loss: 11.49418
+[9,   900] loss: 12.32398
+[9,  1000] loss: 10.47373
+[9,  1100] loss: 15.23185
+[9,  1200] loss: 11.46711
+[9,  1300] loss: 14.18233
+[9,  1400] loss: 9.92124
+[9,  1500] loss: 13.33740
+[9,  1600] loss: 17.97651
+[9,  1700] loss: 11.95732
+[9,  1800] loss: 14.13244
+[9,  1900] loss: 12.41008
+[9,  2000] loss: 15.91476
+[9,  2100] loss: 9.90128
+val error: 170.51395
+9
+[10,   100] loss: 11.10065
+[10,   200] loss: 11.10791
+[10,   300] loss: 11.23454
+[10,   400] loss: 10.56768
+[10,   500] loss: 10.48095
+[10,   600] loss: 9.44145
+[10,   700] loss: 8.13951
+[10,   800] loss: 7.52071
+[10,   900] loss: 9.75456
+[10,  1000] loss: 10.19207
+[10,  1100] loss: 9.80698
+[10,  1200] loss: 13.52152
+[10,  1300] loss: 12.26303
+[10,  1400] loss: 12.70254
+[10,  1500] loss: 15.32443
+[10,  1600] loss: 9.25920
+[10,  1700] loss: 11.33378
+[10,  1800] loss: 13.35709
+[10,  1900] loss: 8.34135
+[10,  2000] loss: 7.44092
+[10,  2100] loss: 13.48504
+val error: 180.15216
+10
+[11,   100] loss: 14.44030
+[11,   200] loss: 9.94079
+[11,   300] loss: 8.02510
+[11,   400] loss: 7.67040
+[11,   500] loss: 8.11883
+[11,   600] loss: 6.94731
+[11,   700] loss: 5.99480
+[11,   800] loss: 9.88128
+[11,   900] loss: 9.19148
+[11,  1000] loss: 12.90773
+[11,  1100] loss: 8.84042
+[11,  1200] loss: 9.56610
+[11,  1300] loss: 10.25877
+[11,  1400] loss: 10.79132
+[11,  1500] loss: 10.52174
+[11,  1600] loss: 11.67978
+[11,  1700] loss: 9.94327
+[11,  1800] loss: 11.99652
+[11,  1900] loss: 10.21358
+[11,  2000] loss: 10.23511
+[11,  2100] loss: 9.64505
+val error: 168.18494
+11
+[12,   100] loss: 8.12934
+[12,   200] loss: 9.39850
+[12,   300] loss: 7.19874
+[12,   400] loss: 10.24300
+[12,   500] loss: 8.99261
+[12,   600] loss: 8.75719
+[12,   700] loss: 7.39413
+[12,   800] loss: 10.62016
+[12,   900] loss: 7.15627
+[12,  1000] loss: 10.35078
+[12,  1100] loss: 7.94805
+[12,  1200] loss: 10.89165
+[12,  1300] loss: 9.93673
+[12,  1400] loss: 9.48666
+[12,  1500] loss: 6.47105
+[12,  1600] loss: 7.07736
+[12,  1700] loss: 7.70650
+[12,  1800] loss: 12.48890
+[12,  1900] loss: 15.17675
+[12,  2000] loss: 10.64275
+[12,  2100] loss: 7.96154
+val error: 191.20236
+12
+[13,   100] loss: 10.60011
+[13,   200] loss: 8.44942
+[13,   300] loss: 6.97657
+[13,   400] loss: 10.73754
+[13,   500] loss: 7.20635
+[13,   600] loss: 6.97190
+[13,   700] loss: 7.24103
+[13,   800] loss: 6.87587
+[13,   900] loss: 6.46413
+[13,  1000] loss: 6.22187
+[13,  1100] loss: 9.26308
+[13,  1200] loss: 9.25633
+[13,  1300] loss: 14.33681
+[13,  1400] loss: 6.16647
+[13,  1500] loss: 5.61120
+[13,  1600] loss: 4.71813
+[13,  1700] loss: 5.77404
+[13,  1800] loss: 6.56722
+[13,  1900] loss: 7.11791
+[13,  2000] loss: 5.90862
+[13,  2100] loss: 6.40293
+val error: 154.97089
+13
+[14,   100] loss: 6.27475
+[14,   200] loss: 6.63598
+[14,   300] loss: 8.77062
+[14,   400] loss: 4.95686
+[14,   500] loss: 4.90820
+[14,   600] loss: 6.29193
+[14,   700] loss: 8.00334
+[14,   800] loss: 11.40901
+[14,   900] loss: 10.55313
+[14,  1000] loss: 5.80163
+[14,  1100] loss: 9.05266
+[14,  1200] loss: 6.07856
+[14,  1300] loss: 6.72257
+[14,  1400] loss: 4.57371
+[14,  1500] loss: 5.33285
+[14,  1600] loss: 11.54173
+[14,  1700] loss: 11.52757
+[14,  1800] loss: 7.60880
+[14,  1900] loss: 8.59958
+[14,  2000] loss: 8.66245
+[14,  2100] loss: 5.32322
+val error: 150.30974
+14
+[15,   100] loss: 10.23540
+[15,   200] loss: 5.70747
+[15,   300] loss: 8.85620
+[15,   400] loss: 7.13822
+[15,   500] loss: 7.09105
+[15,   600] loss: 5.28069
+[15,   700] loss: 6.34979
+[15,   800] loss: 4.21817
+[15,   900] loss: 5.36180
+[15,  1000] loss: 4.78355
+[15,  1100] loss: 7.30344
+[15,  1200] loss: 6.00359
+[15,  1300] loss: 9.98438
+[15,  1400] loss: 4.65041
+[15,  1500] loss: 3.89987
+[15,  1600] loss: 5.68468
+[15,  1700] loss: 6.47005
+[15,  1800] loss: 8.49620
+[15,  1900] loss: 9.76031
+[15,  2000] loss: 8.75051
+[15,  2100] loss: 13.38479
+val error: 197.32298
+15
+[16,   100] loss: 20.86729
+[16,   200] loss: 8.78832
+[16,   300] loss: 4.94068
+[16,   400] loss: 4.59733
+[16,   500] loss: 5.88381
+[16,   600] loss: 5.32275
+[16,   700] loss: 6.76501
+[16,   800] loss: 8.55201
+[16,   900] loss: 4.70137
+[16,  1000] loss: 5.21267
+[16,  1100] loss: 8.54862
+[16,  1200] loss: 4.74963
+[16,  1300] loss: 3.66421
+[16,  1400] loss: 5.40028
+[16,  1500] loss: 3.79454
+[16,  1600] loss: 4.98369
+[16,  1700] loss: 4.58411
+[16,  1800] loss: 5.58437
+[16,  1900] loss: 4.05244
+[16,  2000] loss: 5.56558
+[16,  2100] loss: 4.61345
+val error: 144.27267
+16
+[17,   100] loss: 6.50379
+[17,   200] loss: 3.49177
+[17,   300] loss: 4.81747
+[17,   400] loss: 5.55535
+[17,   500] loss: 6.67440
+[17,   600] loss: 5.28610
+[17,   700] loss: 8.46443
+[17,   800] loss: 6.74270
+[17,   900] loss: 7.56924
+[17,  1000] loss: 4.69412
+[17,  1100] loss: 3.57447
+[17,  1200] loss: 6.90539
+[17,  1300] loss: 5.86131
+[17,  1400] loss: 4.57899
+[17,  1500] loss: 6.83678
+[17,  1600] loss: 4.02124
+[17,  1700] loss: 8.60082
+[17,  1800] loss: 9.54942
+[17,  1900] loss: 6.33354
+[17,  2000] loss: 6.78478
+[17,  2100] loss: 5.12157
+val error: 138.40552
+17
+[18,   100] loss: 8.93744
+[18,   200] loss: 6.12619
+[18,   300] loss: 3.38034
+[18,   400] loss: 3.77434
+[18,   500] loss: 3.56678
+[18,   600] loss: 3.41791
+[18,   700] loss: 3.27228
+[18,   800] loss: 4.57975
+[18,   900] loss: 5.99986
+[18,  1000] loss: 5.51538
+[18,  1100] loss: 5.83087
+[18,  1200] loss: 6.71862
+[18,  1300] loss: 4.16553
+[18,  1400] loss: 4.92449
+[18,  1500] loss: 3.41876
+[18,  1600] loss: 4.84462
+[18,  1700] loss: 4.16757
+[18,  1800] loss: 8.41226
+[18,  1900] loss: 4.72008
+[18,  2000] loss: 5.07813
+[18,  2100] loss: 9.92338
+val error: 149.66307
+18
+[19,   100] loss: 5.76066
+[19,   200] loss: 3.20662
+[19,   300] loss: 5.85595
+[19,   400] loss: 5.23294
+[19,   500] loss: 5.29971
+[19,   600] loss: 6.21662
+[19,   700] loss: 3.83526
+[19,   800] loss: 7.01353
+[19,   900] loss: 5.23580
+[19,  1000] loss: 3.56900
+[19,  1100] loss: 2.91143
+[19,  1200] loss: 3.55371
+[19,  1300] loss: 3.31423
+[19,  1400] loss: 3.73777
+[19,  1500] loss: 8.35702
+[19,  1600] loss: 8.84186
+[19,  1700] loss: 13.69060
+[19,  1800] loss: 5.90393
+[19,  1900] loss: 6.50583
+[19,  2000] loss: 4.27757
+[19,  2100] loss: 7.41855
+val error: 150.32072
+19
+[20,   100] loss: 7.26501
+[20,   200] loss: 6.35499
+[20,   300] loss: 5.03847
+[20,   400] loss: 4.97529
+[20,   500] loss: 3.07351
+[20,   600] loss: 4.81563
+[20,   700] loss: 3.62509
+[20,   800] loss: 4.43490
+[20,   900] loss: 4.18225
+[20,  1000] loss: 6.24895
+[20,  1100] loss: 4.94686
+[20,  1200] loss: 4.81838
+[20,  1300] loss: 4.19361
+[20,  1400] loss: 3.57896
+[20,  1500] loss: 4.98276
+[20,  1600] loss: 4.27647
+[20,  1700] loss: 5.35669
+[20,  1800] loss: 3.16967
+[20,  1900] loss: 5.25240
+[20,  2000] loss: 5.49761
+[20,  2100] loss: 6.16335
+val error: 146.96240
+20
+[21,   100] loss: 5.78231
+[21,   200] loss: 4.75160
+[21,   300] loss: 2.49194
+[21,   400] loss: 2.87701
+[21,   500] loss: 4.76679
+[21,   600] loss: 2.88306
+[21,   700] loss: 4.10040
+[21,   800] loss: 3.13592
+[21,   900] loss: 5.04400
+[21,  1000] loss: 7.91492
+[21,  1100] loss: 3.63970
+[21,  1200] loss: 6.28617
+[21,  1300] loss: 6.78771
+[21,  1400] loss: 4.92676
+[21,  1500] loss: 3.18962
+[21,  1600] loss: 4.27082
+[21,  1700] loss: 4.05463
+[21,  1800] loss: 2.83890
+[21,  1900] loss: 2.47592
+[21,  2000] loss: 4.63580
+[21,  2100] loss: 6.95582
+val error: 160.59514
+21
+[22,   100] loss: 8.18932
+[22,   200] loss: 3.83385
+[22,   300] loss: 4.78453
+[22,   400] loss: 4.83172
+[22,   500] loss: 6.27778
+[22,   600] loss: 4.03123
+[22,   700] loss: 3.18866
+[22,   800] loss: 3.33512
+[22,   900] loss: 3.10431
+[22,  1000] loss: 9.68132
+[22,  1100] loss: 6.21594
+[22,  1200] loss: 6.14802
+[22,  1300] loss: 5.63028
+[22,  1400] loss: 4.92002
+[22,  1500] loss: 4.04474
+[22,  1600] loss: 4.10827
+[22,  1700] loss: 6.31913
+[22,  1800] loss: 3.33535
+[22,  1900] loss: 3.32106
+[22,  2000] loss: 4.90565
+[22,  2100] loss: 2.67126
+val error: 175.94507
+22
+[23,   100] loss: 7.32161
+[23,   200] loss: 4.82054
+[23,   300] loss: 3.57019
+[23,   400] loss: 6.63243
+[23,   500] loss: 4.79365
+[23,   600] loss: 3.31903
+[23,   700] loss: 2.42320
+[23,   800] loss: 3.50919
+[23,   900] loss: 2.72624
+[23,  1000] loss: 3.26061
+[23,  1100] loss: 2.78560
+[23,  1200] loss: 2.53448
+[23,  1300] loss: 4.29026
+[23,  1400] loss: 3.56838
+[23,  1500] loss: 5.23160
+[23,  1600] loss: 3.30859
+[23,  1700] loss: 8.20182
+[23,  1800] loss: 5.32067
+[23,  1900] loss: 4.03724
+[23,  2000] loss: 5.49893
+[23,  2100] loss: 5.09215
+val error: 136.90950
+23
+[24,   100] loss: 3.42178
+[24,   200] loss: 4.69730
+[24,   300] loss: 2.89002
+[24,   400] loss: 5.19037
+[24,   500] loss: 6.28563
+[24,   600] loss: 3.60721
+[24,   700] loss: 2.82814
+[24,   800] loss: 3.36109
+[24,   900] loss: 3.70060
+[24,  1000] loss: 3.50017
+[24,  1100] loss: 2.49781
+[24,  1200] loss: 3.36861
+[24,  1300] loss: 2.96582
+[24,  1400] loss: 3.84314
+[24,  1500] loss: 2.36069
+[24,  1600] loss: 5.95804
+[24,  1700] loss: 4.98910
+[24,  1800] loss: 2.79970
+[24,  1900] loss: 3.56830
+[24,  2000] loss: 4.24728
+[24,  2100] loss: 4.76566
+val error: 139.91525
+24
+[25,   100] loss: 5.96324
+[25,   200] loss: 4.62686
+[25,   300] loss: 4.28026
+[25,   400] loss: 2.55589
+[25,   500] loss: 2.52478
+[25,   600] loss: 3.98589
+[25,   700] loss: 2.06833
+[25,   800] loss: 2.27282
+[25,   900] loss: 6.82372
+[25,  1000] loss: 3.23369
+[25,  1100] loss: 4.80376
+[25,  1200] loss: 2.09539
+[25,  1300] loss: 3.94757
+[25,  1400] loss: 6.27191
+[25,  1500] loss: 2.70854
+[25,  1600] loss: 3.51277
+[25,  1700] loss: 3.38273
+[25,  1800] loss: 5.90106
+[25,  1900] loss: 3.33412
+[25,  2000] loss: 3.12411
+[25,  2100] loss: 3.61752
+val error: 136.36694
+25
+[26,   100] loss: 2.06140
+[26,   200] loss: 6.26891
+[26,   300] loss: 4.81299
+[26,   400] loss: 2.80555
+[26,   500] loss: 2.98738
+[26,   600] loss: 11.24930
+[26,   700] loss: 7.27050
+[26,   800] loss: 3.07568
+[26,   900] loss: 4.56813
+[26,  1000] loss: 2.36864
+[26,  1100] loss: 4.05932
+[26,  1200] loss: 2.41564
+[26,  1300] loss: 2.23562
+[26,  1400] loss: 2.79699
+[26,  1500] loss: 2.23369
+[26,  1600] loss: 2.06398
+[26,  1700] loss: 3.28859
+[26,  1800] loss: 4.48726
+[26,  1900] loss: 8.85495
+[26,  2000] loss: 7.79502
+[26,  2100] loss: 6.06753
+val error: 190.47044
+26
+[27,   100] loss: 16.51281
+[27,   200] loss: 5.68079
+[27,   300] loss: 4.13859
+[27,   400] loss: 3.17569
+[27,   500] loss: 3.68474
+[27,   600] loss: 2.19205
+[27,   700] loss: 3.20305
+[27,   800] loss: 3.69099
+[27,   900] loss: 2.20556
+[27,  1000] loss: 4.33151
+[27,  1100] loss: 2.23593
+[27,  1200] loss: 2.27680
+[27,  1300] loss: 5.83231
+[27,  1400] loss: 3.21461
+[27,  1500] loss: 3.52214
+[27,  1600] loss: 2.81945
+[27,  1700] loss: 2.64106
+[27,  1800] loss: 5.00318
+[27,  1900] loss: 2.75196
+[27,  2000] loss: 3.90775
+[27,  2100] loss: 2.94283
+val error: 137.79462
+27
+[28,   100] loss: 2.07009
+[28,   200] loss: 3.76496
+[28,   300] loss: 4.30279
+[28,   400] loss: 3.49092
+[28,   500] loss: 2.51550
+[28,   600] loss: 2.03188
+[28,   700] loss: 2.49529
+[28,   800] loss: 2.41794
+[28,   900] loss: 1.91126
+[28,  1000] loss: 4.43178
+[28,  1100] loss: 3.30920
+[28,  1200] loss: 3.23705
+[28,  1300] loss: 4.39719
+[28,  1400] loss: 5.45106
+[28,  1500] loss: 2.63945
+[28,  1600] loss: 5.56176
+[28,  1700] loss: 4.06408
+[28,  1800] loss: 2.71994
+[28,  1900] loss: 3.67047
+[28,  2000] loss: 3.11230
+[28,  2100] loss: 2.30236
+val error: 151.41801
+28
+[29,   100] loss: 3.64244
+[29,   200] loss: 4.83398
+[29,   300] loss: 1.81156
+[29,   400] loss: 3.73312
+[29,   500] loss: 2.40033
+[29,   600] loss: 3.12056
+[29,   700] loss: 5.32024
+[29,   800] loss: 4.88378
+[29,   900] loss: 2.57263
+[29,  1000] loss: 4.29530
+[29,  1100] loss: 2.88950
+[29,  1200] loss: 2.88080
+[29,  1300] loss: 7.24470
+[29,  1400] loss: 3.29950
+[29,  1500] loss: 1.99064
+[29,  1600] loss: 1.74589
+[29,  1700] loss: 1.81945
+[29,  1800] loss: 1.73717
+[29,  1900] loss: 3.07476
+[29,  2000] loss: 3.08563
+[29,  2100] loss: 3.95180
+val error: 151.05629
+29
+[30,   100] loss: 4.10928
+[30,   200] loss: 2.92691
+[30,   300] loss: 2.44316
+[30,   400] loss: 2.07158
+[30,   500] loss: 1.87609
+[30,   600] loss: 3.03355
+[30,   700] loss: 1.67620
+[30,   800] loss: 1.71390
+[30,   900] loss: 2.52131
+[30,  1000] loss: 4.98108
+[30,  1100] loss: 2.42811
+[30,  1200] loss: 5.80449
+[30,  1300] loss: 11.22512
+[30,  1400] loss: 6.04519
+[30,  1500] loss: 4.01586
+[30,  1600] loss: 2.82304
+[30,  1700] loss: 1.95521
+[30,  1800] loss: 2.86379
+[30,  1900] loss: 3.07144
+[30,  2000] loss: 3.58176
+[30,  2100] loss: 2.73117
+val error: 138.00514
+30
+[31,   100] loss: 3.90628
+[31,   200] loss: 3.23378
+[31,   300] loss: 2.73542
+[31,   400] loss: 2.17397
+[31,   500] loss: 3.24784
+[31,   600] loss: 3.34070
+[31,   700] loss: 2.93581
+[31,   800] loss: 4.54605
+[31,   900] loss: 3.47784
+[31,  1000] loss: 5.30318
+[31,  1100] loss: 3.42020
+[31,  1200] loss: 3.17925
+[31,  1300] loss: 3.58972
+[31,  1400] loss: 2.19509
+[31,  1500] loss: 3.58155
+[31,  1600] loss: 11.04288
+[31,  1700] loss: 3.68098
+[31,  1800] loss: 2.17785
+[31,  1900] loss: 5.50558
+[31,  2000] loss: 2.70730
+[31,  2100] loss: 2.23565
+val error: 151.97913
+31
+[32,   100] loss: 3.51042
+[32,   200] loss: 2.63197
+[32,   300] loss: 3.83940
+[32,   400] loss: 1.94861
+[32,   500] loss: 1.76734
+[32,   600] loss: 3.32961
+[32,   700] loss: 2.11543
+[32,   800] loss: 3.53763
+[32,   900] loss: 1.60069
+[32,  1000] loss: 1.90436
+[32,  1100] loss: 4.73773
+[32,  1200] loss: 2.38017
+[32,  1300] loss: 2.19384
+[32,  1400] loss: 1.57806
+[32,  1500] loss: 1.47804
+[32,  1600] loss: 2.70636
+[32,  1700] loss: 3.91148
+[32,  1800] loss: 7.40489
+[32,  1900] loss: 3.06638
+[32,  2000] loss: 2.99686
+[32,  2100] loss: 2.16710
+val error: 182.11649
+32
+[33,   100] loss: 6.09494
+[33,   200] loss: 1.81246
+[33,   300] loss: 1.82931
+[33,   400] loss: 1.79608
+[33,   500] loss: 2.83279
+[33,   600] loss: 1.61117
+[33,   700] loss: 2.18281
+[33,   800] loss: 1.85019
+[33,   900] loss: 6.60753
+[33,  1000] loss: 2.14644
+[33,  1100] loss: 2.60459
+[33,  1200] loss: 2.02120
+[33,  1300] loss: 3.03336
+[33,  1400] loss: 2.76235
+[33,  1500] loss: 2.39296
+[33,  1600] loss: 1.64165
+[33,  1700] loss: 1.57420
+[33,  1800] loss: 1.46361
+[33,  1900] loss: 1.33836
+[33,  2000] loss: 3.18635
+[33,  2100] loss: 4.49028
+val error: 142.00650
+33
+[34,   100] loss: 1.97620
+[34,   200] loss: 3.10291
+[34,   300] loss: 1.71848
+[34,   400] loss: 1.67491
+[34,   500] loss: 3.20549
+[34,   600] loss: 3.99339
+[34,   700] loss: 3.08899
+[34,   800] loss: 2.92432
+[34,   900] loss: 4.55456
+[34,  1000] loss: 2.31994
+[34,  1100] loss: 1.80839
+[34,  1200] loss: 1.55920
+[34,  1300] loss: 1.45917
+[34,  1400] loss: 3.28974
+[34,  1500] loss: 1.86028
+[34,  1600] loss: 2.92334
+[34,  1700] loss: 5.67892
+[34,  1800] loss: 2.39156
+[34,  1900] loss: 3.06087
+[34,  2000] loss: 1.77133
+[34,  2100] loss: 1.43182
+val error: 133.61038
+34
+[35,   100] loss: 1.94991
+[35,   200] loss: 2.75378
+[35,   300] loss: 1.41813
+[35,   400] loss: 1.33506
+[35,   500] loss: 1.34837
+[35,   600] loss: 1.34924
+[35,   700] loss: 2.38153
+[35,   800] loss: 1.67176
+[35,   900] loss: 1.39071
+[35,  1000] loss: 3.86457
+[35,  1100] loss: 3.84993
+[35,  1200] loss: 3.69054
+[35,  1300] loss: 1.54600
+[35,  1400] loss: 1.48174
+[35,  1500] loss: 4.72148
+[35,  1600] loss: 4.37241
+[35,  1700] loss: 2.02395
+[35,  1800] loss: 1.72531
+[35,  1900] loss: 1.43812
+[35,  2000] loss: 1.53694
+[35,  2100] loss: 1.36900
+val error: 141.10811
+35
+[36,   100] loss: 1.61944
+[36,   200] loss: 1.32646
+[36,   300] loss: 1.79202
+[36,   400] loss: 1.42635
+[36,   500] loss: 1.27872
+[36,   600] loss: 2.90970
+[36,   700] loss: 1.47396
+[36,   800] loss: 1.43055
+[36,   900] loss: 1.41798
+[36,  1000] loss: 1.17448
+[36,  1100] loss: 1.25788
+[36,  1200] loss: 1.33405
+[36,  1300] loss: 3.78828
+[36,  1400] loss: 1.67447
+[36,  1500] loss: 4.03452
+[36,  1600] loss: 1.43351
+[36,  1700] loss: 1.22838
+[36,  1800] loss: 6.55673
+[36,  1900] loss: 4.58006
+[36,  2000] loss: 3.18468
+[36,  2100] loss: 3.67661
+val error: 159.53665
+36
+[37,   100] loss: 3.64738
+[37,   200] loss: 3.68168
+[37,   300] loss: 4.33184
+[37,   400] loss: 2.01975
+[37,   500] loss: 3.40001
+[37,   600] loss: 3.51266
+[37,   700] loss: 1.95063
+[37,   800] loss: 1.57184
+[37,   900] loss: 4.96853
+[37,  1000] loss: 2.28856
+[37,  1100] loss: 4.13511
+[37,  1200] loss: 2.88576
+[37,  1300] loss: 3.51615
+[37,  1400] loss: 1.55680
+[37,  1500] loss: 1.55771
+[37,  1600] loss: 1.58328
+[37,  1700] loss: 2.48302
+[37,  1800] loss: 3.54258
+[37,  1900] loss: 1.49923
+[37,  2000] loss: 1.36634
+[37,  2100] loss: 1.25870
+val error: 138.90303
+37
+[38,   100] loss: 5.26214
+[38,   200] loss: 2.38018
+[38,   300] loss: 1.53584
+[38,   400] loss: 3.42162
+[38,   500] loss: 1.47528
+[38,   600] loss: 2.34322
+[38,   700] loss: 1.66766
+[38,   800] loss: 1.23168
+[38,   900] loss: 1.16107
+[38,  1000] loss: 1.36109
+[38,  1100] loss: 4.72579
+[38,  1200] loss: 2.19180
+[38,  1300] loss: 2.13471
+[38,  1400] loss: 4.10296
+[38,  1500] loss: 1.92350
+[38,  1600] loss: 3.13695
+[38,  1700] loss: 1.47373
+[38,  1800] loss: 2.41240
+[38,  1900] loss: 2.98322
+[38,  2000] loss: 1.86880
+[38,  2100] loss: 1.72033
+val error: 135.48843
+38
+[39,   100] loss: 3.18400
+[39,   200] loss: 1.67192
+[39,   300] loss: 1.18250
+[39,   400] loss: 3.33852
+[39,   500] loss: 2.30393
+[39,   600] loss: 1.23598
+[39,   700] loss: 1.26450
+[39,   800] loss: 1.62484
+[39,   900] loss: 1.40349
+[39,  1000] loss: 2.45103
+[39,  1100] loss: 1.18013
+[39,  1200] loss: 1.42466
+[39,  1300] loss: 5.54080
+[39,  1400] loss: 2.66119
+[39,  1500] loss: 1.53379
+[39,  1600] loss: 1.35682
+[39,  1700] loss: 1.58004
+[39,  1800] loss: 1.39591
+[39,  1900] loss: 5.43141
+[39,  2000] loss: 1.61012
+[39,  2100] loss: 3.23263
+val error: 138.91391
+39
+[40,   100] loss: 4.32549
+[40,   200] loss: 2.62623
+[40,   300] loss: 5.09732
+[40,   400] loss: 1.89978
+[40,   500] loss: 1.28235
+[40,   600] loss: 1.20434
+[40,   700] loss: 3.01261
+[40,   800] loss: 1.84198
+[40,   900] loss: 2.37001
+[40,  1000] loss: 1.44856
+[40,  1100] loss: 1.91516
+[40,  1200] loss: 1.35010
+[40,  1300] loss: 2.92394
+[40,  1400] loss: 2.53778
+[40,  1500] loss: 1.27947
+[40,  1600] loss: 2.46535
+[40,  1700] loss: 2.25750
+[40,  1800] loss: 1.77554
+[40,  1900] loss: 1.50860
+[40,  2000] loss: 1.84253
+[40,  2100] loss: 3.13220
+val error: 136.49245
+40
+[41,   100] loss: 1.50237
+[41,   200] loss: 1.15170
+[41,   300] loss: 1.20793
+[41,   400] loss: 1.10728
+[41,   500] loss: 1.19473
+[41,   600] loss: 2.52094
+[41,   700] loss: 2.37435
+[41,   800] loss: 1.24367
+[41,   900] loss: 3.56986
+[41,  1000] loss: 3.24636
+[41,  1100] loss: 1.51424
+[41,  1200] loss: 1.37269
+[41,  1300] loss: 2.53511
+[41,  1400] loss: 2.49605
+[41,  1500] loss: 2.90974
+[41,  1600] loss: 2.17029
+[41,  1700] loss: 2.30297
+[41,  1800] loss: 3.79426
+[41,  1900] loss: 1.47107
+[41,  2000] loss: 3.69271
+[41,  2100] loss: 2.07644
+val error: 136.80644
+41
+[42,   100] loss: 2.36412
+[42,   200] loss: 2.63428
+[42,   300] loss: 1.80915
+[42,   400] loss: 1.18367
+[42,   500] loss: 2.48711
+[42,   600] loss: 1.45850
+[42,   700] loss: 1.12980
+[42,   800] loss: 1.66776
+[42,   900] loss: 1.51848
+[42,  1000] loss: 1.32120
+[42,  1100] loss: 1.78060
+[42,  1200] loss: 1.35614
+[42,  1300] loss: 1.17877
+[42,  1400] loss: 3.05894
+[42,  1500] loss: 1.05485
+[42,  1600] loss: 1.24418
+[42,  1700] loss: 0.99180
+[42,  1800] loss: 1.69647
+[42,  1900] loss: 1.25717
+[42,  2000] loss: 2.94837
+[42,  2100] loss: 1.34182
+val error: 134.45317
+42
+[43,   100] loss: 1.78675
+[43,   200] loss: 3.43327
+[43,   300] loss: 2.95305
+[43,   400] loss: 1.11461
+[43,   500] loss: 1.08094
+[43,   600] loss: 1.09465
+[43,   700] loss: 1.04447
+[43,   800] loss: 0.94717
+[43,   900] loss: 1.03507
+[43,  1000] loss: 1.01464
+[43,  1100] loss: 0.94953
+[43,  1200] loss: 1.10887
+[43,  1300] loss: 1.02929
+[43,  1400] loss: 0.97592
+[43,  1500] loss: 2.81369
+[43,  1600] loss: 1.18893
+[43,  1700] loss: 0.98180
+[43,  1800] loss: 1.67827
+[43,  1900] loss: 1.10671
+[43,  2000] loss: 0.97906
+[43,  2100] loss: 1.10983
+val error: 128.01439
+43
+[44,   100] loss: 1.12688
+[44,   200] loss: 2.48120
+[44,   300] loss: 1.81255
+[44,   400] loss: 1.45174
+[44,   500] loss: 1.38384
+[44,   600] loss: 2.60228
+[44,   700] loss: 3.15085
+[44,   800] loss: 2.36102
+[44,   900] loss: 3.92967
+[44,  1000] loss: 1.25464
+[44,  1100] loss: 1.78323
+[44,  1200] loss: 1.81402
+[44,  1300] loss: 3.45788
+[44,  1400] loss: 2.37507
+[44,  1500] loss: 3.42353
+[44,  1600] loss: 1.41669
+[44,  1700] loss: 2.37021
+[44,  1800] loss: 1.84097
+[44,  1900] loss: 2.69240
+[44,  2000] loss: 1.92800
+[44,  2100] loss: 2.49317
+val error: 135.07968
+44
+[45,   100] loss: 2.04963
+[45,   200] loss: 1.21834
+[45,   300] loss: 1.04222
+[45,   400] loss: 0.97517
+[45,   500] loss: 2.39597
+[45,   600] loss: 1.20817
+[45,   700] loss: 1.00167
+[45,   800] loss: 2.73852
+[45,   900] loss: 3.99646
+[45,  1000] loss: 1.48757
+[45,  1100] loss: 1.68121
+[45,  1200] loss: 3.25274
+[45,  1300] loss: 3.62857
+[45,  1400] loss: 1.43003
+[45,  1500] loss: 1.74486
+[45,  1600] loss: 2.39824
+[45,  1700] loss: 2.36011
+[45,  1800] loss: 1.20243
+[45,  1900] loss: 1.57089
+[45,  2000] loss: 1.09024
+[45,  2100] loss: 2.92053
+val error: 138.69875
+45
+[46,   100] loss: 3.12184
+[46,   200] loss: 1.81078
+[46,   300] loss: 1.53004
+[46,   400] loss: 2.66416
+[46,   500] loss: 1.44361
+[46,   600] loss: 3.81491
+[46,   700] loss: 2.40148
+[46,   800] loss: 3.54810
+[46,   900] loss: 3.72672
+[46,  1000] loss: 1.24727
+[46,  1100] loss: 1.07665
+[46,  1200] loss: 1.65219
+[46,  1300] loss: 1.16061
+[46,  1400] loss: 2.91655
+[46,  1500] loss: 1.16504
+[46,  1600] loss: 1.64205
+[46,  1700] loss: 1.70158
+[46,  1800] loss: 2.78224
+[46,  1900] loss: 3.30255
+[46,  2000] loss: 3.98758
+[46,  2100] loss: 1.65640
+val error: 133.57353
+46
+[47,   100] loss: 1.19718
+[47,   200] loss: 0.97341
+[47,   300] loss: 0.99507
+[47,   400] loss: 1.00321
+[47,   500] loss: 2.10652
+[47,   600] loss: 1.06158
+[47,   700] loss: 1.35609
+[47,   800] loss: 2.38067
+[47,   900] loss: 1.21087
+[47,  1000] loss: 2.38599
+[47,  1100] loss: 1.86889
+[47,  1200] loss: 3.80077
+[47,  1300] loss: 1.14850
+[47,  1400] loss: 1.00789
+[47,  1500] loss: 1.00092
+[47,  1600] loss: 0.93524
+[47,  1700] loss: 2.68781
+[47,  1800] loss: 0.94394
+[47,  1900] loss: 3.51223
+[47,  2000] loss: 4.97906
+[47,  2100] loss: 1.45015
+val error: 128.78577
+47
+[48,   100] loss: 1.52906
+[48,   200] loss: 1.05777
+[48,   300] loss: 2.05413
+[48,   400] loss: 3.14849
+[48,   500] loss: 3.85629
+[48,   600] loss: 2.63843
+[48,   700] loss: 2.24595
+[48,   800] loss: 2.55335
+[48,   900] loss: 2.64728
+[48,  1000] loss: 3.03144
+[48,  1100] loss: 2.73024
+[48,  1200] loss: 1.24624
+[48,  1300] loss: 1.19577
+[48,  1400] loss: 1.97046
+[48,  1500] loss: 1.49855
+[48,  1600] loss: 1.18939
+[48,  1700] loss: 1.06540
+[48,  1800] loss: 1.26273
+[48,  1900] loss: 4.07644
+[48,  2000] loss: 2.13569
+[48,  2100] loss: 1.13284
+val error: 141.89996
+48
+[49,   100] loss: 1.64328
+[49,   200] loss: 2.52116
+[49,   300] loss: 1.96119
+[49,   400] loss: 3.58073
+[49,   500] loss: 2.11723
+[49,   600] loss: 2.70347
+[49,   700] loss: 1.93792
+[49,   800] loss: 1.69470
+[49,   900] loss: 1.15543
+[49,  1000] loss: 1.01986
+[49,  1100] loss: 1.02537
+[49,  1200] loss: 1.09755
+[49,  1300] loss: 1.01024
+[49,  1400] loss: 0.99300
+[49,  1500] loss: 0.96509
+[49,  1600] loss: 0.89234
+[49,  1700] loss: 0.87835
+[49,  1800] loss: 1.02672
+[49,  1900] loss: 0.92609
+[49,  2000] loss: 1.18626
+[49,  2100] loss: 2.84273
+val error: 148.19846
+49
+[50,   100] loss: 4.06439
+[50,   200] loss: 1.33205
+[50,   300] loss: 0.99516
+[50,   400] loss: 0.99050
+[50,   500] loss: 0.89700
+[50,   600] loss: 0.88759
+[50,   700] loss: 0.88103
+[50,   800] loss: 0.89002
+[50,   900] loss: 1.62990
+[50,  1000] loss: 1.78786
+[50,  1100] loss: 1.17795
+[50,  1200] loss: 0.95699
+[50,  1300] loss: 2.22566
+[50,  1400] loss: 1.33795
+[50,  1500] loss: 1.02326
+[50,  1600] loss: 1.51481
+[50,  1700] loss: 3.34036
+[50,  1800] loss: 3.44749
+[50,  1900] loss: 1.66575
+[50,  2000] loss: 3.98857
+[50,  2100] loss: 1.48421
+val error: 128.86566
+50
+[51,   100] loss: 1.81181
+[51,   200] loss: 1.74478
+[51,   300] loss: 1.55892
+[51,   400] loss: 2.44861
+[51,   500] loss: 3.34575
+[51,   600] loss: 2.42629
+[51,   700] loss: 3.29244
+[51,   800] loss: 2.88466
+[51,   900] loss: 3.39563
+[51,  1000] loss: 1.17570
+[51,  1100] loss: 2.49223
+[51,  1200] loss: 1.25265
+[51,  1300] loss: 1.14565
+[51,  1400] loss: 3.85682
+[51,  1500] loss: 2.10393
+[51,  1600] loss: 1.28812
+[51,  1700] loss: 2.02372
+[51,  1800] loss: 1.12367
+[51,  1900] loss: 0.98398
+[51,  2000] loss: 0.94844
+[51,  2100] loss: 0.86483
+val error: 134.01726
+51
+[52,   100] loss: 0.93419
+[52,   200] loss: 3.42603
+[52,   300] loss: 2.11276
+[52,   400] loss: 2.57028
+[52,   500] loss: 4.22135
+[52,   600] loss: 1.14439
+[52,   700] loss: 0.98313
+[52,   800] loss: 1.72002
+[52,   900] loss: 1.48201
+[52,  1000] loss: 1.12421
+[52,  1100] loss: 2.65084
+[52,  1200] loss: 1.11270
+[52,  1300] loss: 0.95071
+[52,  1400] loss: 0.87832
+[52,  1500] loss: 2.45592
+[52,  1600] loss: 0.97899
+[52,  1700] loss: 0.83130
+[52,  1800] loss: 0.89781
+[52,  1900] loss: 0.85895
+[52,  2000] loss: 0.86718
+[52,  2100] loss: 0.91320
+val error: 131.89952
+52
+[53,   100] loss: 2.17686
+[53,   200] loss: 0.97848
+[53,   300] loss: 0.85129
+[53,   400] loss: 1.16331
+[53,   500] loss: 0.86208
+[53,   600] loss: 0.88219
+[53,   700] loss: 0.76783
+[53,   800] loss: 0.76368
+[53,   900] loss: 0.98010
+[53,  1000] loss: 1.04133
+[53,  1100] loss: 0.82787
+[53,  1200] loss: 0.83214
+[53,  1300] loss: 0.79783
+[53,  1400] loss: 2.78848
+[53,  1500] loss: 0.78673
+[53,  1600] loss: 0.75473
+[53,  1700] loss: 0.86296
+[53,  1800] loss: 0.89995
+[53,  1900] loss: 0.79733
+[53,  2000] loss: 1.55685
+[53,  2100] loss: 1.05575
+val error: 123.80164
+53
+[54,   100] loss: 1.85524
+[54,   200] loss: 0.94628
+[54,   300] loss: 0.94900
+[54,   400] loss: 0.92543
+[54,   500] loss: 0.83988
+[54,   600] loss: 0.74909
+[54,   700] loss: 3.02436
+[54,   800] loss: 1.04085
+[54,   900] loss: 1.06763
+[54,  1000] loss: 0.79619
+[54,  1100] loss: 0.81213
+[54,  1200] loss: 0.83060
+[54,  1300] loss: 0.87405
+[54,  1400] loss: 0.78636
+[54,  1500] loss: 0.80874
+[54,  1600] loss: 1.00678
+[54,  1700] loss: 0.83756
+[54,  1800] loss: 0.75408
+[54,  1900] loss: 0.94153
+[54,  2000] loss: 0.82511
+[54,  2100] loss: 0.78014
+val error: 122.71671
+54
+[55,   100] loss: 1.16935
+[55,   200] loss: 0.83957
+[55,   300] loss: 1.35877
+[55,   400] loss: 3.27010
+[55,   500] loss: 3.24457
+[55,   600] loss: 1.04461
+[55,   700] loss: 3.13017
+[55,   800] loss: 2.26409
+[55,   900] loss: 1.10610
+[55,  1000] loss: 1.06615
+[55,  1100] loss: 3.34939
+[55,  1200] loss: 0.88924
+[55,  1300] loss: 0.79883
+[55,  1400] loss: 0.80782
+[55,  1500] loss: 0.80689
+[55,  1600] loss: 0.75423
+[55,  1700] loss: 0.89338
+[55,  1800] loss: 1.10678
+[55,  1900] loss: 0.78445
+[55,  2000] loss: 0.82539
+[55,  2100] loss: 0.72138
+val error: 126.72223
+55
+[56,   100] loss: 1.02451
+[56,   200] loss: 0.71226
+[56,   300] loss: 0.72319
+[56,   400] loss: 0.77851
+[56,   500] loss: 0.67655
+[56,   600] loss: 1.39948
+[56,   700] loss: 1.14878
+[56,   800] loss: 1.17014
+[56,   900] loss: 3.40857
+[56,  1000] loss: 0.98649
+[56,  1100] loss: 0.95605
+[56,  1200] loss: 0.95648
+[56,  1300] loss: 0.84545
+[56,  1400] loss: 2.53518
+[56,  1500] loss: 0.81091
+[56,  1600] loss: 1.00277
+[56,  1700] loss: 2.78619
+[56,  1800] loss: 1.03968
+[56,  1900] loss: 0.79732
+[56,  2000] loss: 0.72714
+[56,  2100] loss: 0.75462
+val error: 137.45232
+56
+[57,   100] loss: 2.47451
+[57,   200] loss: 0.89744
+[57,   300] loss: 1.23594
+[57,   400] loss: 0.75950
+[57,   500] loss: 0.77320
+[57,   600] loss: 0.73485
+[57,   700] loss: 1.68092
+[57,   800] loss: 1.03061
+[57,   900] loss: 0.82850
+[57,  1000] loss: 0.91861
+[57,  1100] loss: 0.81269
+[57,  1200] loss: 0.74899
+[57,  1300] loss: 0.74048
+[57,  1400] loss: 0.79214
+[57,  1500] loss: 0.69826
+[57,  1600] loss: 0.89080
+[57,  1700] loss: 2.49259
+[57,  1800] loss: 0.95705
+[57,  1900] loss: 0.76212
+[57,  2000] loss: 0.72105
+[57,  2100] loss: 0.77511
+val error: 135.90323
+57
+[58,   100] loss: 2.41912
+[58,   200] loss: 0.83936
+[58,   300] loss: 0.71718
+[58,   400] loss: 2.66124
+[58,   500] loss: 2.73046
+[58,   600] loss: 0.84389
+[58,   700] loss: 0.74593
+[58,   800] loss: 0.74229
+[58,   900] loss: 0.73648
+[58,  1000] loss: 2.14790
+[58,  1100] loss: 0.95058
+[58,  1200] loss: 0.78609
+[58,  1300] loss: 0.78488
+[58,  1400] loss: 0.63393
+[58,  1500] loss: 0.63759
+[58,  1600] loss: 0.61827
+[58,  1700] loss: 0.67134
+[58,  1800] loss: 0.67229
+[58,  1900] loss: 0.61849
+[58,  2000] loss: 0.64713
+[58,  2100] loss: 0.61951
+val error: 123.28040
+58
+[59,   100] loss: 0.75980
+[59,   200] loss: 0.65845
+[59,   300] loss: 0.61944
+[59,   400] loss: 0.82058
+[59,   500] loss: 2.85061
+[59,   600] loss: 1.15900
+[59,   700] loss: 0.94076
+[59,   800] loss: 2.50398
+[59,   900] loss: 0.85931
+[59,  1000] loss: 0.70594
+[59,  1100] loss: 0.67670
+[59,  1200] loss: 0.58632
+[59,  1300] loss: 0.61645
+[59,  1400] loss: 0.83497
+[59,  1500] loss: 0.68403
+[59,  1600] loss: 0.75308
+[59,  1700] loss: 0.68381
+[59,  1800] loss: 0.68876
+[59,  1900] loss: 0.63458
+[59,  2000] loss: 0.63149
+[59,  2100] loss: 0.62685
+val error: 125.15585
+59
+[60,   100] loss: 0.90948
+[60,   200] loss: 0.69940
+[60,   300] loss: 0.65166
+[60,   400] loss: 0.77244
+[60,   500] loss: 0.62892
+[60,   600] loss: 0.60701
+[60,   700] loss: 0.76064
+[60,   800] loss: 1.07861
+[60,   900] loss: 0.72594
+[60,  1000] loss: 0.74707
+[60,  1100] loss: 0.60227
+[60,  1200] loss: 0.68778
+[60,  1300] loss: 0.65727
+[60,  1400] loss: 0.63358
+[60,  1500] loss: 0.64143
+[60,  1600] loss: 0.61132
+[60,  1700] loss: 0.63558
+[60,  1800] loss: 0.66029
+[60,  1900] loss: 0.60081
+[60,  2000] loss: 0.78061
+[60,  2100] loss: 2.26680
+val error: 132.73936
+Finished Training
