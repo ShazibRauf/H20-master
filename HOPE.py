@@ -112,7 +112,7 @@ if args.gpu:
     use_cuda = True
 
 model = select_model(args.model_def)
-print(model.resnet)
+#print(model.resnet)
 
 
 if use_cuda and torch.cuda.is_available():

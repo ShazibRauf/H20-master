@@ -75,12 +75,13 @@ class Dataset(data.Dataset):
         Returns:
             tuple: (image, points2D, points3D).
         """
+        #print("============================",index)
         path = self.images[index]
         sub_path = path.split("raw/")[1]
         sub_path = sub_path[:-4]+'.txt'
         sub_path = sub_path.replace("rgb","hand_pose_mano")
         #print("--->",sub_path)
-        mano_path = os.path.join('/home5', 'satti', 'mano_labels_v1_1', sub_path)
+        mano_path = os.path.join('/home', 'satti', 'mano_labels_v1_1', sub_path)
         anno = load_annotations(mano_path)
 
         mesh3D_right = load_mesh_from_manolayer(anno['handPose_right'], anno['handBeta_right'], anno['handTrans_right'], 'right')
@@ -89,7 +90,8 @@ class Dataset(data.Dataset):
         mesh = np.concatenate([mesh3D_left, mesh3D_right])
         #print("oooooooo",index)
         #print('.......opening an image: ', self.images[index])
-        image = Image.open(self.images[index])
+        sub_path = self.images[index].split("../")[-1]
+        image = Image.open(os.path.join('/', sub_path))
         point2d = self.points2d[index]
         point3d = self.points3d[index]
 

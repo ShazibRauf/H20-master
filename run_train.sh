@@ -1,9 +1,10 @@
 #!/bin/bash
+bash /home/satti/H20-master-main/install.sh
 
-export CUDA_VISIBLE_DEVICES=5
+export CUDA_VISIBLE_DEVICES=0
 python3 HOPE.py > output.txt\
-  --input_file /home5/satti/HOPE-master9-Zeros-cam4/datasets/ho/ \
-  --output_file /home5/satti/HOPE-master9-Zeros-cam4/checkpoints/ho/model- \
+  --input_file /home/satti/H20-master-main/datasets/ho/ \
+  --output_file /home/satti/H20-master-main/checkpoints/ho/model- \
   --train \
   --val \
   --stage 2 \
@@ -18,5 +19,5 @@ python3 HOPE.py > output.txt\
   --val_epoch 1 \
   --snapshot_epoch 1 \
   --num_iterations 120 \
-  --pretrained_model ./checkpoints/ho/model-101.pkl
+  --pretrained_model /home/satti/H20-master-main/checkpoints/ho/model-85.pkl
 
